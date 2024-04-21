@@ -234,3 +234,7 @@ Create a free account in render.com
 New -> Web Service -> 
 Select 'Build and deploy from a Git repository'
 
+
+ADD env variables 
+no need to add   NODE_ENV, if you add it, it will create issue on deployment
+NODE_ENV=production
