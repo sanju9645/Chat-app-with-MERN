@@ -238,3 +238,15 @@ Select 'Build and deploy from a Git repository'
 ADD env variables 
 no need to add   NODE_ENV, if you add it, it will create issue on deployment
 NODE_ENV=production
+
+
+
+change localhost:3000 to
+
+  useEffect(() => {
+    if (authUser) {
+      const socket = io("https://chat-app-with-mern-2liz.onrender.com/", {
+        query: {
+          userId : authUser._id,
+        }
+      });
