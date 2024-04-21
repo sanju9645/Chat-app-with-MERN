@@ -76,3 +76,28 @@ Add "type": "module" in the package.json
 
 
 https://avatar-placeholder.iran.liara.run/document/#username
+
+
+-----------------------------
+Step 6 - Frontend
+-----------------------------
+Install tailwind css
+
+https://tailwindcss.com/docs/guides/vite
+
+Add daisy UI
+https://daisyui.com/docs/install/
+
+npm i -D daisyui@latest
+
+To create glassmorphism
+
+https://tailwindcss-glassmorphism.vercel.app/
+
+
+
+
+npm install react-icons --save
+
+find icon code from here,
+https://react-icons.github.io/react-icons/
