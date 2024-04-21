@@ -4,9 +4,10 @@
   "description": "Build a Realtime Chat App with MERN Stack",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "backend/server.js",
-    "dev": "nodemon backend/server.js"
+		"server": "nodemon backend/server.js",
+		"start": "node backend/server.js",
+    "dev": "nodemon backend/server.js",
+		"build": "npm install && npm install --prefix frontend && npm run build --prefix frontend"
   },
   "type": "module",
   "keywords": [],

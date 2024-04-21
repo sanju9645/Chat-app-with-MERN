@@ -166,3 +166,63 @@ Step 8 - Installing Socket client on react
 -----------------------------
 
 npm i socket.io-client
+
+
+
+
+.env file 
+
+PORT=3000
+
+MONGODB_URI=
+JWT_SECRET = gF4&h@#JL!pR3$WzZ7*E^+i%C
+JWT_TOKEN_EXPIRY_DAYS=2
+
+MODE_ENV=development
+
+
+
+
+
+
+-----------------------------
+Deployemnt
+-----------------------------
+
+
+On server.js 
+
+import path from "path";
+
+const __dirname = path.resolve();
+
+
+app.use(express.static(path.join(__dirname, "/frontend/dist")));
+
+app.get("*", (req, res) => {
+	res.sendFile(path.join(__dirname, "frontend", "dist", "index.html"));
+});
+ (This means any route except starts with 'api/' will render index.html)
+
+when we run npm run build on 'frontend', this will create a dist folder 
+
+On the root directory, edit package.json file
+
+"scripts": {
+		"server": "nodemon backend/server.js",
+		"start": "node backend/server.js",
+    "dev": "nodemon backend/server.js"
+		"build": "npm install && npm install --prefix frontend && npm run build --prefix frontend"
+},
+
+		"build": "npm install && npm install --prefix frontend && npm run build --prefix frontend"
+This will run ,
+on root, npm install
+cd frontend
+npm install
+npm run build
+
+
+So, on root folder, just run 'npm run build'
+then run 'npm start'
+
