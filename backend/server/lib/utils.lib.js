@@ -15,7 +15,8 @@ export const isProdEnv = () => {
 }
 
 export const sendCustomErrorResponse = (res, error, responseCode = 400) => {
-  return res.status(responseCode).json({ error });
+  res.status(responseCode).json({ error });
+  return;
 }
 
 export const sendCustomSuccessResponse = (res, message, responseCode = 200) => {

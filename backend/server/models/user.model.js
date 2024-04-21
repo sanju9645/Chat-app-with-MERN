@@ -1,10 +1,6 @@
 import mongoose from 'mongoose';
 
 const userSchema = new mongoose.Schema({
-  createdAt: {
-    type: Date,
-    default: Date.now
-  },
   fullName: {
     type: String,
     required: true
@@ -28,7 +24,7 @@ const userSchema = new mongoose.Schema({
     type: String,
     default: ""
   }
-});
+}, { timestamps: true } );
 
 const User = mongoose.model("User", userSchema);
 

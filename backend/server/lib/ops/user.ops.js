@@ -3,7 +3,8 @@ import { sendCustomErrorResponse } from '../utils.lib.js';
 import User from '../../models/user.model.js';
 
 export const userById = async (id) => {
-  const user = await User.findOne({ _id : id });
+  const user = await User.findOne({ _id : id }).select( "-password");
+
   return user;
 }
 
@@ -30,4 +31,16 @@ export const createUserFromRequestBody = async (req, res) => {
   }
 
   return false;
+}
+
+export const allUsers = async () => {
+  const users = await User.find().select("-password");
+  return users;
+}
+
+export const allUsersExceptCurrentUser = async (req, res) => {
+  const loggedInUserId = req.user._id;
+  const filteredUsers = await User.find({ _id : { $ne: loggedInUserId }}).select("-password");
+
+  return filteredUsers;
 }
