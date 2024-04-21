@@ -1,17 +1,17 @@
 # Chat-app-with-MERN
-Build a Realtime Chat App with MERN Stack
+Buildin' a Realtime Chat App with MERN Stack
 
 -----------------------------
 Step 1
 -----------------------------
 
-cd frontend
+Hop into the frontend folder
 
 npm create vite@latest .
 
-recovery@RecoverY frontend % npm create vite@latest .
+recovery@RecoverY/frontend% npm create vite@latest .
 
-the . will create a react app on the current directory
+Using the period will kickstart a React app right in the current spot
 
 npm i
 
@@ -20,41 +20,41 @@ npm i
 Step 2
 -----------------------------
 
-cd ..
+Head back..
 
-recovery@RecoverY Chat-app-with-MERN % npm init -y
+RecoverY Chat-app-with-MERN% npm init -y
 
 
-This will create the package.json file, on the package.json file, 
+That'll whip up a package.json file, now on to tweakin' it:
 
 -----------------------------
 Step 3
 -----------------------------
 
-change   "main": "index.js", to "main": "server.js"
+Switch up the "main" from "index.js" to "server.js"
 
 -----------------------------
 Step 4
 -----------------------------
 
-install the dependencies on the main project folder
+Load up them dependencies in the main project folder
 
 npm install express dotenv cookie-parser bcryptjs mongoose socket.io jsonwebtoken nodemon
 
-'nodemon' is not required in prod env, so it is dev dependency
+Nodemon ain't needed in the big leagues, so it's just for the devs
 
 npm uninstall nodemon
 
-Run, 
+Then, set up:
 
 npm i nodemon --save-dev
 
 -----------------------------
 Step 5
 -----------------------------
-Then create this "server.js" file in the 'backend' folder
+Now, let's craft up that "server.js" file in the 'backend' folder
 
-Edit the package.json file
+Make some edits to the package.json file
 
 "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -69,9 +69,9 @@ Edit the package.json file
 Step 5
 -----------------------------
 
-Create .env file
+Time to whip up a .env file
 
-Add "type": "module" in the package.json
+And add "type": "module" in the package.json
 
 
 
@@ -81,16 +81,16 @@ https://avatar-placeholder.iran.liara.run/document/#username
 -----------------------------
 Step 6 - Frontend Dependencies
 -----------------------------
-Install tailwind css
+Add some tailwind css flavor
 
 https://tailwindcss.com/docs/guides/vite
 
-Add daisy UI
+Toss in some daisy UI
 https://daisyui.com/docs/install/
 
 npm i -D daisyui@latest
 
-To create glassmorphism
+For that sweet glassmorphism look
 
 https://tailwindcss-glassmorphism.vercel.app/
 
@@ -99,11 +99,11 @@ https://tailwindcss-glassmorphism.vercel.app/
 
 npm install react-icons --save
 
-find icon code from here,
+Grab some icon code from here,
 https://react-icons.github.io/react-icons/
 
 
-To use toast
+For a touch of toast action
 
 react-hot-toast
 
@@ -114,7 +114,7 @@ Step 6 - React Router
 -----------------------------
 npm i react-router-dom
 
-Add BrowserRouter in main.jsx file
+Slip a BrowserRouter in the main.jsx file
 
 import React from 'react'
 import ReactDOM from 'react-dom/client'
@@ -146,18 +146,18 @@ export default defineConfig({
 -----------------------------
 Step 8 - Handling login
 -----------------------------
-After a user logged in, we need to store it in the local storage and it should be globally available on every page, for that we use 'Context', check AuthContext
+Once a user logs in, stash it in the local storage for all to see, with 'Context', peep AuthContext
 
-Which is a global state
+That's your global state right there
 
-We can also use ZUSTAND for this
+You can also kick it up a notch with ZUSTAND
 
 npm install zustand
 
-So when the user click on a chat, we will store the clicked conversation and messages on a global state using zustand
+So when someone taps a chat, we'll save that convo and the messages in a global state using zustand
 
 
-Then we need to create a hook to get all conversations
+Next up, craft a hook to snag all them convos
 
 
 
@@ -178,7 +178,7 @@ MONGODB_URI=
 JWT_SECRET = gF4&h@#JL!pR3$WzZ7*E^+i%C
 JWT_TOKEN_EXPIRY_DAYS=2
 
-MODE_ENV=development
+NODE_ENV=development
 
 
 
@@ -225,4 +225,12 @@ npm run build
 
 So, on root folder, just run 'npm run build'
 then run 'npm start'
+
+
+
+
+Create a free account in render.com
+
+New -> Web Service -> 
+Select 'Build and deploy from a Git repository'
 

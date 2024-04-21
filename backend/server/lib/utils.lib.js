@@ -11,7 +11,7 @@ export const secureExecute = (req, res, errMsg, callback) => {
 }
 
 export const isProdEnv = () => {
-  return process.env.MODE_ENV !== "development";
+  return process.env.NODE_ENV !== "development";
 }
 
 export const sendCustomErrorResponse = (res, error, responseCode = 400) => {
