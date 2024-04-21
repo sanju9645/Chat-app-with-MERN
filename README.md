@@ -79,7 +79,7 @@ https://avatar-placeholder.iran.liara.run/document/#username
 
 
 -----------------------------
-Step 6 - Frontend
+Step 6 - Frontend Dependencies
 -----------------------------
 Install tailwind css
 
@@ -101,3 +101,68 @@ npm install react-icons --save
 
 find icon code from here,
 https://react-icons.github.io/react-icons/
+
+
+To use toast
+
+react-hot-toast
+
+
+
+-----------------------------
+Step 6 - React Router
+-----------------------------
+npm i react-router-dom
+
+Add BrowserRouter in main.jsx file
+
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import App from './App.jsx'
+import './index.css'
+import BrowserRouter from 'react-router-dom';
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </React.StrictMode>,
+)
+
+
+-----------------------------
+Step 7 - Changing Port
+-----------------------------
+export default defineConfig({
+  plugins: [react()],
+  server: {
+    port: "5000"
+  }
+})
+
+
+
+-----------------------------
+Step 8 - Handling login
+-----------------------------
+After a user logged in, we need to store it in the local storage and it should be globally available on every page, for that we use 'Context', check AuthContext
+
+Which is a global state
+
+We can also use ZUSTAND for this
+
+npm install zustand
+
+So when the user click on a chat, we will store the clicked conversation and messages on a global state using zustand
+
+
+Then we need to create a hook to get all conversations
+
+
+
+-----------------------------
+Step 8 - Installing Socket client on react
+-----------------------------
+
+npm i socket.io-client
